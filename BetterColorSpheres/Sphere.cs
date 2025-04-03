@@ -19,6 +19,21 @@ namespace BetterColorSpheres
             TimesThrown = 0;
         }
 
-        
+        public void Pop()
+        {
+            Radius = 0;
+        }
+        public void Throw()
+        {
+            if (Radius > 0)
+            {
+                TimesThrown++;
+            }
+        }
+
+        public override string ToString()
+        {
+            return $"Sphere(Color: {Color}, Radius: {Radius}, Times Thrown: {TimesThrown})";
+        }
     }
 }
