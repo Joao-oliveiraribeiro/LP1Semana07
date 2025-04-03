@@ -23,5 +23,17 @@ namespace BetterColorSpheres
             Blue = Clamp(blue);
             Alpha = alpha;
         }
+
+        public int Grey => (Red + Green + Blue)/3;
+
+        private int Clamp(int value)
+        {
+            return Math.Max(0, Math.Min(255, value));
+        }
+
+        public override string ToString()
+        {
+            return $"Color(R: {Red}, G: {Green}, B: {Blue}, A: {Alpha})"
+        }
     }
 }
