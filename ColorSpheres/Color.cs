@@ -18,6 +18,17 @@ namespace ColorSpheres
         public int GetBlue() => _blue;
         public int GetAlpha() => _alpha;
 
-        
+        public int GetGrey()
+        {
+            return (_red+ _green+ _blue)/3;
+        }
+        private int Clamp(int value)
+        {
+            return Math.Max(0, Math.Min(255, value));
+        }
+        public override string ToString()
+        {
+            return $"Color(R:{_red}, G: {_green}, B: {_blue}, A: {_alpha})";
+        }
     }
 }
