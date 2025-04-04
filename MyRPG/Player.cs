@@ -48,6 +48,17 @@ namespace Player
             }
         }
 
+        public void TakeDamage(float damage)
+        {
         
+            Health -= damage;
+            XP =  int damage /20;
+        }
+        public Player(string name)
+        {
+            this.name = name;
+            xp = 0;
+            Health = MaxHealth;
+        }
     }
 }
