@@ -20,6 +20,13 @@ namespace Player
         }
 
        }
-      
+       public int Level
+       {
+        get
+        {
+            return 1 + XP /1000;
+        }
+       }
+       
     }
 }
